@@ -1,5 +1,3 @@
-# TechVidvan hand Gesture Recognizer
-
 # import necessary packages
 
 import cv2
@@ -42,8 +40,6 @@ while True:
     # print(result)
     
     className = ''
-
-    # post process the result
     if result.multi_hand_landmarks:
         landmarks = []
         for handslms in result.multi_hand_landmarks:
@@ -72,8 +68,6 @@ while True:
 
     if cv2.waitKey(1) == 13:
         break
-
-# release the webcam and destroy all active windows
 cap.release()
 
 cv2.destroyAllWindows()
